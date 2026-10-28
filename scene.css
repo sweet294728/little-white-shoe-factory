@@ -31,3 +31,8 @@ header h1{color:#38543f;background:#fff6dfeb;border:1px solid #c3a16a;border-rad
 @media(max-width:700px){.part:not(.valve-part) img{max-width:40%}}
 
 @media(min-width:701px){.part-info{top:auto;bottom:20%;max-height:35%}}
+
+/* Fit the complete part explanation without an internal scrollbar. */
+.part-info{max-height:none;overflow:visible}
+@media(min-width:701px){.part-info{max-height:none;bottom:20%;padding:10px 12px;gap:5px}.part-info strong{font-size:clamp(15px,1.4vw,20px)}.part-info #part-info-text,.part-info #part-info-fact-text{font-size:clamp(11px,.9vw,13px)}.info-section,.info-fact{padding-top:4px;gap:1px}}
+@media(max-width:700px){.part-info{height:auto;min-height:132px;overflow:visible}.part:not(.valve-part) img{max-height:100%}}
