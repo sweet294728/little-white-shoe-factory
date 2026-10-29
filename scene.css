@@ -54,3 +54,5 @@ header h1{color:#38543f;background:#fff6dfeb;border:1px solid #c3a16a;border-rad
 .worker-action[data-worker="c"].playing .install-sprite{animation-name:install-poses-c}
 @keyframes install-poses-c{0%{opacity:0;background-position:0% 50%;clip-path:inset(0)}8%,24%{opacity:1;background-position:0% 50%;clip-path:inset(0)}25%,49%{opacity:1;background-position:50% 50%;clip-path:inset(0 0 0 12%)}50%,74%{opacity:1;background-position:100% 50%;clip-path:inset(0)}75%,90%{opacity:1;background-position:50% 50%;clip-path:inset(0 0 0 12%)}100%{opacity:0;background-position:50% 50%;clip-path:inset(0 0 0 12%)}}
 .install-dust{width:20px;height:20px;box-shadow:0 0 9px 3px #f8eed9}.dust-one{left:-26px}.dust-two{left:2px;width:25px;height:25px}.dust-three{left:24px;width:16px;height:16px}
+/* Mask the preceding pose at the left edge of K's middle frame. */
+.worker-action[data-worker="k"].playing .install-sprite{animation-name:install-poses-c}
