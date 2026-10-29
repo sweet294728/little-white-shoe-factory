@@ -19,8 +19,8 @@ bindParts(grid);bindParts(valveArea);board.addEventListener('click',e=>{if(!stat
 function reset(){clearTimeout(completionTimer);clearTimeout(workerTimer);workers.hidden=true;workers.classList.remove('playing');hideInfo();state.done.clear();state.selected=null;modal.hidden=true;message.textContent='從喜歡的零件開始吧。';render()}document.querySelector('#reset').addEventListener('click',reset);document.querySelector('#again').addEventListener('click',reset);new ResizeObserver(()=>render()).observe(shoe);hideInfo();render();
 document.querySelector('#tray-prev').addEventListener('click',()=>grid.scrollBy({left:-grid.clientWidth*.8,behavior:'smooth'}));document.querySelector('#tray-next').addEventListener('click',()=>grid.scrollBy({left:grid.clientWidth*.8,behavior:'smooth'}));
 
-// Leave empty until the coupon destination is provided.
-const COUPON_URL='';
+// Coupon destination.
+const COUPON_URL='https://bmai.app/2383efdd';
 document.querySelector('#coupon').addEventListener('click',()=>{if(COUPON_URL){window.open(COUPON_URL,'_blank','noopener,noreferrer')}else{document.querySelector('#coupon-note').textContent='優惠券連結即將開放，敬請期待！'}});
 
 for(const container of [grid,valveArea]){container.addEventListener('pointerover',e=>{const b=e.target.closest('.part');if(b&&!b.disabled)showInfo(all.find(p=>p.id===b.dataset.id))});container.addEventListener('focusin',e=>{const b=e.target.closest('.part');if(b&&!b.disabled)showInfo(all.find(p=>p.id===b.dataset.id))});}
